@@ -2,7 +2,7 @@ const title = document.querySelector(".title");
 const text = document.querySelector(".text");
 const button = document.querySelector(".button");
 
-func = () => {
+(() => {
     setTimeout( async () => { //сделала async/await, чтобы рендеринг срабатывал после промиса, подсмотрела у ребят в чатике))
         await Promise.resolve().then(() => {
             console.log ('promise 1');
@@ -26,5 +26,4 @@ func = () => {
         })
     }, 0)
     
-}
-button.addEventListener("click", func);
+})()
